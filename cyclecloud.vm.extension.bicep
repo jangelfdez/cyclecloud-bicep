@@ -29,7 +29,7 @@ resource ccVmCustomScript 'Microsoft.Compute/virtualMachines/extensions@2022-08-
     protectedSettings: {
       commandToExecute: 'python3 configure.py --tenantId ${tenantId} --username ${adminUsername} --hostname ${ccVmName} --acceptTerms --useManagedIdentity --password ${adminPassword} --publickey "${publicKey}" --storageAccount ${storageAccountName} --resourceGroup ${resourceGroup().name}'
       fileUris: [
-        'https://jacyclesaccount.blob.core.windows.net/public/configure.py'
+        'https://raw.githubusercontent.com/jangelfdez/cyclecloud-bicep/main/configure.py'
       ]
     }
   }
